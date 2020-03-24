@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<form method="GET">
+    {% include 'includes/form.html' %}
+</form>
+<hr>
+<h2>Search Results</h2>
+<ul class="list-group">
+    {% for user in filter.qs %}
+        <li class="list-group-item">Username: {{user.username}} - First Name: {{user.first_name}}</li>
+    {% endfor %}
+</ul>    
+{% endblock %}

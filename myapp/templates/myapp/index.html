@@ -1,0 +1,7 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<h2 class="text-center">Search Filter</h2>
+<form action="{% url 'search' %}" method="get">
+    {% include 'includes/form.html' %}
+</form>    
+{% endblock %}
